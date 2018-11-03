@@ -1,0 +1,9 @@
+#Ported using Team Hovatek's Auto Philz Recovery Porter
+/dev/block/platform/mtk-msdc.0/by-name/boot		    	/boot		emmc	defaults								defaults
+/dev/block/platform/mtk-msdc.0/by-name/recovery		    /recovery	emmc	defaults								defaults
+/dev/block/platform/mtk-msdc.0/by-name/cache		    /cache      ext4    noatime,nosuid,nodev,noauto_da_alloc,discard               wait,check
+/dev/block/platform/mtk-msdc.0/by-name/userdata		    /data       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard               wait,check,resize,encryptable=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
+/dev/block/platform/mtk-msdc.0/by-name/system		    /system		ext4	ro      								wait
+/dev/block/mmcblk1p1									/external_sd		auto	defaults				voldmanaged=sdcard0:auto,noemulatedsd
+/data/media/0											/internal_sd		auto	defaults				voldmanaged=sdcard1:auto
+/dev/block/sda1        									/usbotg 	 	    vfat    defaults        		voldmanaged=usbotg:auto
